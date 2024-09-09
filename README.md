@@ -1,4 +1,4 @@
-# Switch
+# Idea Ignite
 
 A landing page template.
 
