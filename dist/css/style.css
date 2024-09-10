@@ -1,6 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
 
+.bold {
+    font-weight: 600;
+    color: #000;
+    font-size: 27px;
+    /* font-family:"Zen Dots",sans-serif; */
+}
+
+.lights-off .bold {
+    font-weight: 600;
+    color: #fff;
+    font-size: 20px;
+    /* font-family:"Zen Dots",sans-serif; */
+}
+
+.indentation {
+    font-size: 18px;
+    /* text-indent: 1%; */
+    padding-top: 2%;
+}
+
 @media (max-width: 600px) {
 
     .timeline .container{
@@ -54,6 +74,41 @@
     }
 }
 
+.countdown {
+    color: #de0404;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.lights-off .countdown {
+    color: #7785e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.countdown div {
+    margin: 0 10px;
+    text-align: center;
+}
+.countdown div span {
+    display: block;
+    font-size: 2em;
+}
+
+.colon {
+    padding-bottom: 7%;
+}
+
 .zen-dots-regular {
     font-family: "Zen Dots", sans-serif;
     font-weight: 400;
@@ -104,7 +159,7 @@
     text-decoration: none;
     position: relative;
     font-size: 20px;
-    color: #fff;
+    color: #546378;
     font-weight: 500;
     text-decoration: none;
     margin-left: 40px;
@@ -368,11 +423,12 @@ html {
 *,
 *:before,
 *:after {
+    font-size: 18px;
     box-sizing: inherit;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:"Zen Dots",sans-serif;
+    font-family:"Poppins",sans-serif;
 }
 
 body {
@@ -632,7 +688,7 @@ h6,
 }
 
 .text-xs {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 24px;
     letter-spacing: -0.1px
 }
@@ -1514,8 +1570,15 @@ label {
 
 .site-header {
     position: relative;
-    padding: 24px 0;
-    z-index: 2
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
 }
 
 .site-header::before {
@@ -1614,8 +1677,7 @@ label {
 
 .hero-media-illustration {
     position: absolute;
-    top: -10%;
-    left: -15px
+    top: -20%;
 }
 
 .hero-media-illustration img,
@@ -1712,7 +1774,7 @@ label {
         position: absolute;
         top: -168px;
         left: -722px;
-        width: 1440px;
+        width: 1460px;
         height: 324px
     }
 }
@@ -1891,7 +1953,9 @@ label {
 }
 
 .is-boxed {
-    background: #E9EDF3
+    background: #E9EDF3;
+    /* width: 100%; */
+    overflow-x: hidden;
 }
 
 .body-wrap {
@@ -1903,8 +1967,7 @@ label {
 }
 
 .boxed-container {
-    max-width: 1440px;
-    margin: 0 auto;
+    max-width: 100%;
     box-shadow: 0 16px 48px rgba(255, 255, 255, 0.5)
 }
 
@@ -2049,7 +2112,7 @@ main {
 }
 
 .lights-off {
-    color: #8595AE
+    color: #becde5
 }
 
 .lights-off .asset-light {
@@ -2076,7 +2139,7 @@ main {
 .lights-off .h4,
 .lights-off .h5,
 .lights-off .h6 {
-    color: #fff !important
+    color: #04a0de !important
 }
 
 .lights-off.is-boxed {
