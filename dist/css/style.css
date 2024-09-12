@@ -7,6 +7,24 @@ html {
     -webkit-text-size-adjust: 100%
 }
 
+.feature-inner-prize{
+    display: block;
+    text-align: center;
+}
+
+.prize-value {
+    font-size: 45px;
+    font-family: 'Zen Dots',sans-serif;
+}
+
+
+.place-icons {
+    margin-left: 28.5%;
+    margin-top: 20px;
+    width: 250px;
+    height: 250px;
+}
+
 .navbar {
     z-index: 10;
     display: flex;
@@ -66,6 +84,10 @@ html {
     font-size: small;
 }
 
+.timeline-title {
+    font-size: 70px;
+}
+
 .time-heading {
     font-size: 45px;
 }
@@ -123,7 +145,7 @@ html {
     margin: 0 auto;
 }
 
-.timeline::after {
+.lights-off .timeline::after {
     content: '';
     position: absolute;
     width: 6px;
@@ -134,7 +156,35 @@ html {
     margin-left: -3px;
 }
 
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: rgb(0, 0, 0);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
 @media (max-width: 768px) {
+
+    .prize-value {
+        font-size: 40px;
+        font-family: 'Zen Dots',sans-serif;
+    }
+
+    .place-icons {
+        margin-left: 0%;
+        margin-top: 20px;
+        width: 175px;
+        height: 175px;
+    }
+
+    .timeline-title {
+        font-size: 50px;
+    }
+
     .time-dot {
         height: 30px;
         width: 30px;
