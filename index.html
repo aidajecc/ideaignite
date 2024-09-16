@@ -10,14 +10,18 @@
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 </head>
 <body class="is-boxed has-animations">
+    <a href="#" class="fab" onclick="document.getElementById('nav-bar').scrollIntoView({ behavior: 'smooth' }); return false;">^</a>
     <div class="body-wrap boxed-container">
         <nav class="navbar">
-            <div class="lights-off logo">MyApp</div>
-            <ul class="nav-links">
-                <li><a href="https://devfolio.co" style="text-decoration: none;"><i>Home</i></a></li>
-                <li><a href="#" style="text-decoration: none;"><i>About</i></a></li>
-                <li><a href="#" style="text-decoration: none;"><i>Services</i></a></li>
-                <li><a href="#" style="text-decoration: none;"><i>Contact</i></a></li>
+            <div class="logo">
+                <img class="asset-dark" src="dist/images/logo-dark.png" alt="Logo" style="height: 40px;">
+                <img class="asset-light" src="dist/images/logo-light.png" alt="Logo" style="height: 40px;">
+            </div>
+            <ul class="nav-links" id="nav-bar">
+                <li><a href="#" style="text-decoration: none;" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' }); return false;"><i>About</i></a></li>
+                <li><a href="#" style="text-decoration: none;" onclick="document.getElementById('timeline').scrollIntoView({ behavior: 'smooth' }); return false;"><i>Timeline</i></a></li>
+                <li><a href="#" style="text-decoration: none;" onclick="document.getElementById('prizes').scrollIntoView({ behavior: 'smooth' }); return false;"><i>Prizes</i></a></li>
+                <li><a href="#" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); return false;" style="text-decoration: none;"><i>Contact</i></a></li>
             </ul>
             <label class="hamburger">
                 <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed"><path d="M280-600v-80h560v80H280Zm0 160v-80h560v80H280Zm0 160v-80h560v80H280ZM160-600q-17 0-28.5-11.5T120-640q0-17 11.5-28.5T160-680q17 0 28.5 11.5T200-640q0 17-11.5 28.5T160-600Zm0 160q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520q17 0 28.5 11.5T200-480q0 17-11.5 28.5T160-440Zm0 160q-17 0-28.5-11.5T120-320q0-17 11.5-28.5T160-360q17 0 28.5 11.5T200-320q0 17-11.5 28.5T160-280Z"/></svg>
@@ -68,8 +72,8 @@
 								<img class="hero-media-illustration-image asset-dark" src="dist/images/hero-media-illustration-dark.svg" alt="Hero media illustration">
 							</div>
 							<div class="hero-media-container">
-								<img class="hero-media-image asset-light" src="dist/images/hero-media-light.svg" alt="Hero media">
-								<img class="hero-media-image asset-dark" src="dist/images/hero-media-dark.svg" alt="Hero media">
+								<img class="hero-media-image asset-light" src="dist/images/poster-light.png" style="width: 528px;" alt="Hero media">
+								<img class="hero-media-image asset-dark" src="dist/images/poster-dark.png" style="width:528px;" alt="Hero media">
 							</div>
 						</div>
                     </div>
@@ -81,7 +85,7 @@
 					<div class="features-inner section-inner has-bottom-divider">
 						<div class="features-header text-center">
 							<div class="container-sm">
-                                <h2 class="section-title mt-0">About The Event</h2>
+                                <h2 class="section-title mt-0" id="about">About The Event</h2>
                                 <p class="section-paragraph"><b class="bold">Idea Ignite</b> is a cutting-edge idea
                                     pitching competition
                                     designed to spotlight <b class="bold">innovative</b> concepts at the intersection of
@@ -94,10 +98,6 @@
                         <div class="features-wrap">
                             <div class="feature is-revealing">
                                 <div class="feature-inner">
-                                    <div class="feature-icon">
-										<img class="asset-light" src="dist/images/feature-01-light.svg" alt="Feature 01">
-										<img class="asset-dark" src="dist/images/feature-01-dark.svg" alt="Feature 01">
-                                    </div>
 									<div class="feature-content">
                                         <h3 class="feature-title mt-0">Why ?</h3>
                                             <li class="bold">
@@ -115,10 +115,6 @@
                             </div>
 							<div class="feature is-revealing">
                                 <div class="feature-inner">
-                                    <div class="feature-icon">
-										<img class="asset-light" src="dist/images/feature-02-light.svg" alt="Feature 02">
-										<img class="asset-dark" src="dist/images/feature-02-dark.svg" alt="Feature 02">
-                                    </div>
 									<div class="feature-content">
                                     	<h3 class="feature-title mt-0">When and Where ?</h3>
                                     	<p class="text-sm mb-0">
@@ -130,10 +126,6 @@
                             </div>
 							<div class="feature is-revealing">
                                 <div class="feature-inner">
-                                    <div class="feature-icon">
-										<img class="asset-light" src="dist/images/feature-03-light.svg" alt="Feature 03">
-										<img class="asset-dark" src="dist/images/feature-03-dark.svg" alt="Feature 03">
-                                    </div>
 									<div class="feature-content">
                                     	<h3 class="feature-title mt-0">How ?</h3>
                                     	<p class="text-sm mb-0">
@@ -153,7 +145,7 @@
 					<div class="features-inner section-inner has-bottom-divider">
 						<div class="features-header text-center">
 							<div class="container-sm">
-								<h2 class="section-title mt-0 timeline-title">Timeline</h2>
+								<h2 class="section-title mt-0 timeline-title" id="timeline">Timeline</h2>
 							</div>
                         </div>
                         <div class="timeline">
@@ -211,7 +203,7 @@
 					<div class="features-inner section-inner has-bottom-divider">
 						<div class="features-header text-center">
 							<div class="container-sm">
-								<h2 class="section-title mt-0 timeline-title">Prize Pool</h2>
+								<h2 class="section-title mt-0 timeline-title" id="prizes">Prize Pool</h2>
 							</div>
                         </div>
                         <div class="features-wrap">
@@ -257,44 +249,37 @@
 					<div class="features-inner section-inner has-bottom-divider">
 						<div class="features-header text-center">
 							<div class="container-sm">
-								<h2 class="section-title mt-0">Sponsors</h2>
-	                            <p class="section-paragraph">Lorem ipsum is common placeholder text used to demonstrate the graphic elements of a document or visual presentation.</p>
+								<h2 class="section-title mt-0 timeline-title">Sponsors</h2>
 							</div>
                         </div>
                         <div class="features-wrap">
-                            <div class="feature is-revealing">
-                                <div class="feature-inner">
+                            <div class="feature feature-prize is-revealing">
+                                <div class="feature-inner-prize">
                                     <div class="feature-icon">
-										<img class="asset-light" src="dist/images/feature-01-light.svg" alt="Feature 01">
-										<img class="asset-dark" src="dist/images/feature-01-dark.svg" alt="Feature 01">
+										<img class="sponsor-icon" src="dist/images/etherium-icon.svg" alt="Feature 01">
                                     </div>
 									<div class="feature-content">
-                                    	<h3 class="feature-title mt-0">Discover</h3>
-                                    	<p class="text-sm mb-0">Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dui.</p>
+                                    	<h3 class="prize-value heading-value">Ethereum Foundation</h3>
 									</div>
 								</div>
                             </div>
-							<div class="feature is-revealing">
-                                <div class="feature-inner">
+							<div class="feature feature-prize is-revealing">
+                                <div class="feature-inner-prize">
                                     <div class="feature-icon">
-										<img class="asset-light" src="dist/images/feature-02-light.svg" alt="Feature 02">
-										<img class="asset-dark" src="dist/images/feature-02-dark.svg" alt="Feature 02">
+										<img class="sponsor-icon" src="dist/images/polygon.jpg" alt="Feature 01">
                                     </div>
 									<div class="feature-content">
-                                    	<h3 class="feature-title mt-0">Discover</h3>
-                                    	<p class="text-sm mb-0">Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dui.</p>
+                                    	<h3 class="prize-value ">Polygon</h3>
 									</div>
 								</div>
                             </div>
-							<div class="feature is-revealing">
-                                <div class="feature-inner">
+							<div class="feature feature-prize is-revealing">
+                                <div class="feature-inner-prize">
                                     <div class="feature-icon">
-										<img class="asset-light" src="dist/images/feature-03-light.svg" alt="Feature 03">
-										<img class="asset-dark" src="dist/images/feature-03-dark.svg" alt="Feature 03">
+										<img class="sponsor-icon-devfolio" src="dist/images/devfolio.png" alt="Feature 01">
                                     </div>
 									<div class="feature-content">
-                                    	<h3 class="feature-title mt-0">Discover</h3>
-                                    	<p class="text-sm mb-0">Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dui.</p>
+                                    	<h3 class="prize-value ">Devfolio</h3>
 									</div>
 								</div>
                             </div>
@@ -307,45 +292,90 @@
 					<div class="features-inner section-inner has-bottom-divider">
 						<div class="features-header text-center">
 							<div class="container-sm">
-								<h2 class="section-title mt-0">Frequently Asked Questions</h2>
-	                            <p class="section-paragraph">Lorem ipsum is common placeholder text used to demonstrate the graphic elements of a document or visual presentation.</p>
+								<h2 class="section-title mt-0" style="margin-bottom: 50px;">Frequently Asked Questions</h2>
 							</div>
                         </div>
                         <div class="features-wrap">
+                            <div class="feature is-revealing" style="margin-bottom: 10px;">
+                                <div class="feature-inner">
+									<div class="feature-content">
+                                        <ol>
+                                            <li class="bold" style="margin-bottom: 30px;">
+                                                What is Idea Ignite?</li><p class="indentation"><b class="bold">Idea Ignite</b> is an idea pitching competition that brings together innovators to present their ideas on sustainability,
+                                                    blockchain, AI/ML, and related emerging technologies. It offers a platform to showcase impactful solutions.</p>
+                                            <li class="bold" style="margin-bottom: 30px;">
+                                                When and where is the event?</li><p class="indentation">The event will take place on 3rd October 2024, from 9:30 AM to 1:30 PM at Jyothi Engineering College,
+                                                    Thrissur.</p>
+                                            <li class="bold" style="margin-bottom: 30px;">
+                                                Who can participate in Idea Ignite?</li><p class="indentation">Students, innovators, and professionals with ideas related to sustainability, blockchain, AI/ML, or any relevant
+                                                    technological domain are welcome to participate. The competition is open to individuals or teams.</p>
+                                        </ol>
+                                    </div>
+								</div>
+                            </div>
                             <div class="feature is-revealing">
                                 <div class="feature-inner">
-                                    <div class="feature-icon">
-										<img class="asset-light" src="dist/images/feature-01-light.svg" alt="Feature 01">
-										<img class="asset-dark" src="dist/images/feature-01-dark.svg" alt="Feature 01">
-                                    </div>
 									<div class="feature-content">
-                                    	<h3 class="feature-title mt-0">Discover</h3>
-                                    	<p class="text-sm mb-0">Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dui.</p>
-									</div>
+                                        <ol start="4">
+                                            <li class="bold" style="margin-bottom: 30px;">
+                                                What is the theme or focus of the competition?</li><p class="indentation">The competition focuses on innovative solutions in sustainability, blockchain, AI/ML, and other related
+                                                    emerging technologies that address real-world challenges.</p>
+                                            <li class="bold" style="margin-bottom: 30px;">
+                                                How can I register for the competition?</li><p class="indentation">You can register through our event website by clicking the "Register" button. Detailed instructions will guide you
+                                                    through the process.</p>
+                                            <li class="bold" style="margin-bottom: 30px;">
+                                                What is the deadline for registration?</li><p class="indentation">The last date to register for Idea Ignite is 28th September 2024. Be sure to submit your application before the
+                                                    deadline to secure your spot.</p>
+                                        </ol>
+                                    </div>
 								</div>
                             </div>
-							<div class="feature is-revealing">
+                            <div class="feature is-revealing">
                                 <div class="feature-inner">
-                                    <div class="feature-icon">
-										<img class="asset-light" src="dist/images/feature-02-light.svg" alt="Feature 02">
-										<img class="asset-dark" src="dist/images/feature-02-dark.svg" alt="Feature 02">
-                                    </div>
 									<div class="feature-content">
-                                    	<h3 class="feature-title mt-0">Discover</h3>
-                                    	<p class="text-sm mb-0">Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dui.</p>
-									</div>
+                                        <ol start="7">
+                                            <li class="bold" style="margin-bottom: 30px;">
+                                                Is there a participation fee?</li><p class="indentation">No, there is no fee to participate in Idea Ignite. It is a free competition designed to encourage innovation.</p>
+                                            <li class="bold" style="margin-bottom: 30px;">
+                                                What are the evaluation criteria?</li><p class="indentation">Your pitch will be judged on innovation, feasibility, sustainability impact, technicality, and
+                                                    presentation skills. A panel of experts will evaluate each pitch.</p>
+                                            <li class="bold" style="margin-bottom: 30px;">
+                                                Are there any prizes for the winners?</li><p class="indentation">Yes, exciting cash prizes and recognition will be awarded to the top-performing teams, along with mentorship
+                                                    opportunities to bring your ideas to life.</p>
+                                        </ol>
+                                    </div>
 								</div>
                             </div>
-							<div class="feature is-revealing">
+                            <div class="feature is-revealing">
                                 <div class="feature-inner">
-                                    <div class="feature-icon">
-										<img class="asset-light" src="dist/images/feature-03-light.svg" alt="Feature 03">
-										<img class="asset-dark" src="dist/images/feature-03-dark.svg" alt="Feature 03">
-                                    </div>
 									<div class="feature-content">
-                                    	<h3 class="feature-title mt-0">Discover</h3>
-                                    	<p class="text-sm mb-0">Lorem ipsum dolor sit amet, consecte adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua dui.</p>
-									</div>
+                                        <ol start="10">
+                                            <li class="bold" style="margin-bottom: 30px;">
+                                                How much time will each team get to pitch?</li><p class="indentation">Each team will have 5-7 minutes to present their idea, followed by a brief Q&A session with the judges.</p>
+                                            <li class="bold" style="margin-bottom: 30px;">
+                                                Can I participate as part of a team?</li><p class="indentation">Yes, participants can join individually or form teams of up to 4 members.</p>
+                                            <li class="bold" style="margin-bottom: 30px;">
+                                                What technologies or tools can be used in the pitch?</li><p class="indentation">You can use any technology or platform to support your idea, such as prototypes, presentations, or videos.
+                                                    Ensure it aligns with the event's themes of sustainability, blockchain, and AI/ML.</p>
+                                        </ol>
+                                    </div>
+								</div>
+                            </div>
+                            <div class="feature is-revealing">
+                                <div class="feature-inner">
+									<div class="feature-content">
+                                        <ol start="13">
+                                            <li class="bold" style="margin-bottom: 30px;">
+                                                What support will be provided to the participants?</li><p class="indentation">Participants will have access to mentors and resources before the event to refine their ideas and pitches. On
+                                                    the day of the event, technical support will be available for presentations.</p>
+                                            <li class="bold" style="margin-bottom: 30px;">
+                                                What should I bring to the event?</li><p class="indentation">Please bring a laptop or any other device needed to present your idea, along with any supporting materials such as
+                                                    prototypes, presentation slides, or handouts.</p>
+                                            <li class="bold" style="margin-bottom: 30px;">
+                                                How do I contact the organizers for further questions?</li><p class="indentation">If you have any other queries, please reach out to us at [Insert Contact Information] or email give email for
+                                                    more details.</p>
+                                        </ol>
+                                    </div>
 								</div>
                             </div>
                         </div>
@@ -357,11 +387,15 @@
                 <div class="container-sm">
                     <div class="cta-inner section-inner">
                         <div class="cta-header text-center">
-                            <h2 class="section-title mt-0">Contact Us</h2>
-                            <p class="section-paragraph">Lorem ipsum is common placeholder text used to demonstrate the graphic elements of a document or visual presentation.</p>
-							<div class="cta-cta">
-								<a class="button button-primary" href="#">Form</a>
-							</div>
+                            <h2 class="section-title mt-0" style="margin-bottom: 50px;" id="contact">Contact Us</h2>
+                            <form action="#" class="contact-full-form">
+                                <div>
+                                  <input type="text" placeholder="Your Name" required>
+                                  <input type="email" placeholder="Your Email" required>
+                                </div>
+                                <textarea placeholder="Your Message" rows="4" required></textarea>
+                                <button type="submit" style="margin-top: 50px;">Submit</button>
+                            </form>                       
 					    </div>
                     </div>
                 </div>
