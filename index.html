@@ -18,13 +18,25 @@
                 <img class="asset-light" src="dist/images/logo-light.png" alt="Logo" style="height: 40px;">
             </div>
             <ul class="nav-links" id="nav-bar">
-                <li><a href="#" style="text-decoration: none;" onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' }); return false;"><i>About</i></a></li>
+                <li><a href="#" style="text-decoration: none;" onclick="document.getElementById('aboutEvent').scrollIntoView({ behavior: 'smooth' }); return false;"><i>About</i></a></li>
                 <li><a href="#" style="text-decoration: none;" onclick="document.getElementById('timeline').scrollIntoView({ behavior: 'smooth' }); return false;"><i>Timeline</i></a></li>
                 <li><a href="#" style="text-decoration: none;" onclick="document.getElementById('prizes').scrollIntoView({ behavior: 'smooth' }); return false;"><i>Prizes</i></a></li>
                 <li><a href="#" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); return false;" style="text-decoration: none;"><i>Contact</i></a></li>
+                <li>
+                    <div id="lights-toggle" class="icon-toggle">
+                        <i id="icon-light" class="fas fa-sun">
+                            <img src="dist/images/light.png" alt="light-mode" style="width: 34px;">
+                        </i>
+                        <i id="icon-dark" class="fas fa-moon">
+                            <img src="dist/images/dark.png" alt="dark-mode" style="width: 34px;">
+                        </i>
+                    </div>
+                </li>
+                
             </ul>
             <label class="hamburger">
-                <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#e8eaed"><path d="M280-600v-80h560v80H280Zm0 160v-80h560v80H280Zm0 160v-80h560v80H280ZM160-600q-17 0-28.5-11.5T120-640q0-17 11.5-28.5T160-680q17 0 28.5 11.5T200-640q0 17-11.5 28.5T160-600Zm0 160q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520q17 0 28.5 11.5T200-480q0 17-11.5 28.5T160-440Zm0 160q-17 0-28.5-11.5T120-320q0-17 11.5-28.5T160-360q17 0 28.5 11.5T200-320q0 17-11.5 28.5T160-280Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#000000" class="asset-light"><path d="M280-600v-80h560v80H280Zm0 160v-80h560v80H280Zm0 160v-80h560v80H280ZM160-600q-17 0-28.5-11.5T120-640q0-17 11.5-28.5T160-680q17 0 28.5 11.5T200-640q0 17-11.5 28.5T160-600Zm0 160q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520q17 0 28.5 11.5T200-480q0 17-11.5 28.5T160-440Zm0 160q-17 0-28.5-11.5T120-320q0-17 11.5-28.5T160-360q17 0 28.5 11.5T200-320q0 17-11.5 28.5T160-280Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#ffffff" class="asset-dark"><path d="M280-600v-80h560v80H280Zm0 160v-80h560v80H280Zm0 160v-80h560v80H280ZM160-600q-17 0-28.5-11.5T120-640q0-17 11.5-28.5T160-680q17 0 28.5 11.5T200-640q0 17-11.5 28.5T160-600Zm0 160q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520q17 0 28.5 11.5T200-480q0 17-11.5 28.5T160-440Zm0 160q-17 0-28.5-11.5T120-320q0-17 11.5-28.5T160-360q17 0 28.5 11.5T200-320q0 17-11.5 28.5T160-280Z"/></svg>
             </label>
         </nav>
 
@@ -55,11 +67,7 @@
                                 </div>
                             </div>
                             <div class="hero-cta">
-								<a class="button button-primary lights-off" id="registerButton" href="www.google.com">------</a>
-								<div class="lights-toggle">
-									<input id="lights-toggle" type="checkbox" name="lights-toggle" class="switch">
-									<label for="lights-toggle" class="text-xs"><span>Turn me <span class="label-text">dark</span></span></label>
-								</div>
+								<a class="button button-primary" id="registerButton" href="www.google.com">------</a>
 							</div>
 						</div>
 						<div class="hero-media">
@@ -85,7 +93,7 @@
 					<div class="features-inner section-inner has-bottom-divider">
 						<div class="features-header text-center">
 							<div class="container-sm">
-                                <h2 class="section-title mt-0" id="about">About The Event</h2>
+                                <h2 class="section-title mt-0" id="aboutEvent">About The Event</h2>
                                 <p class="section-paragraph"><b class="bold">Idea Ignite</b> is a cutting-edge idea
                                     pitching competition
                                     designed to spotlight <b class="bold">innovative</b> concepts at the intersection of
@@ -145,6 +153,54 @@
 					<div class="features-inner section-inner has-bottom-divider">
 						<div class="features-header text-center">
 							<div class="container-sm">
+                                <h2 class="section-title mt-0" id="aboutJyothi">About Jyothi</h2>	
+                            </div>
+                        </div>
+                        <div class="features-wrap">
+                            <div class="feature is-revealing">
+                                <div class="feature-inner">
+									<div class="feature-content">
+                                        <!-- <h3 class="feature-title mt-0">Why ?</h3> -->
+                                            <li class="content">Jyothi Engineering College (JEC), established in 2002 under the Catholic Archdiocese of Trichur, is a leading engineering institution in Kerala, affiliated with Kerala Technological University.</li>
+                                            <li class="content">It offers BTech, MTech, and PhD programs and holds NAAC 'A' grade accreditation, with five undergraduate programs also accredited by the NBA. </li>
+                                            <li class="content">JEC focuses on producing "T-Shaped" professionals with both deep expertise and broad 21st-century skills. </li>
+                                            <li class="content">The college features an Integrated Industrial Incubation Centre (IIIC) with TATA Technologies and a Technology Business Incubator (TBI) to support innovation and entrepreneurship.</li>
+                                    </div>
+								</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="features section">
+                <div class="container">
+					<div class="features-inner section-inner has-bottom-divider">
+						<div class="features-header text-center">
+							<div class="container-sm">
+                                <h2 class="section-title mt-0" id="aboutJyothi">About AIDA</h2>	
+                            </div>
+                        </div>
+                        <div class="features-wrap">
+                            <div class="feature is-revealing">
+                                <div class="feature-inner">
+									<div class="feature-content">
+                                        <!-- <h3 class="feature-title mt-0">Why ?</h3> -->
+                                            <li class="content">The Department of Artificial Intelligence and Data Science launched its Bachelor of Technology program in Artificial Intelligence and Data Science in 2020, admitting 60 students in its inaugural year.</li>
+                                            <li class="content">In 2021, the Artificial Intelligence and Data Science Association (AIDA) was established and has since organized numerous events.</li>
+                                            <li class="content">AIDA has played a pivotal role in aligning both the department and its students with the latest technological advancements, encouraging experimentation across various domains.</li>
+                                            <li class="content">The association is actively working on implementing new features and is on track to deliver a shippable product soon.</li>
+                                    </div>
+								</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="features section">
+                <div class="container">
+					<div class="features-inner section-inner has-bottom-divider">
+						<div class="features-header text-center">
+							<div class="container-sm">
 								<h2 class="section-title mt-0 timeline-title" id="timeline">Timeline</h2>
 							</div>
                         </div>
@@ -163,7 +219,7 @@
                             <div class="container right">
                                 <div class="content">
                                     <div class = "time-tile">
-                                        <h2 class="time-heading">28th Sept. 11:59 PM</h2>
+                                        <h2 class="time-heading">23rd Sept. 11:59 PM</h2>
                                     </div>
                                     <div class = "time-tile">
                                         <!-- <p class="time-desc"> Participants can begin registering for the competition through the event website</p> -->
@@ -249,7 +305,7 @@
 					<div class="features-inner section-inner has-bottom-divider">
 						<div class="features-header text-center">
 							<div class="container-sm">
-								<h2 class="section-title mt-0 timeline-title">Sponsors</h2>
+								<h2 class="section-title mt-0 timeline-title" id="sponsors">Sponsors</h2>
 							</div>
                         </div>
                         <div class="features-wrap">
@@ -292,7 +348,7 @@
 					<div class="features-inner section-inner has-bottom-divider">
 						<div class="features-header text-center">
 							<div class="container-sm">
-								<h2 class="section-title mt-0" style="margin-bottom: 50px;">Frequently Asked Questions</h2>
+								<h2 class="section-title mt-0" style="margin-bottom: 50px;" id="faq">Frequently Asked Questions</h2>
 							</div>
                         </div>
                         <div class="features-wrap">
@@ -407,38 +463,30 @@
                 <div class="site-footer-inner">
                     <div class="brand footer-brand">
                         <a href="#">
-							<img class="asset-light" src="dist/images/logo-light.svg" alt="Logo">
-							<img class="asset-dark" src="dist/images/logo-dark.svg" alt="Logo">
+							<img class="asset-light" src="dist/images/logo-dark.png" alt="Logo" style="height: 40px;">
+							<img class="asset-dark" src="dist/images/logo-dark.png" alt="Logo" style="height: 40px;">
                         </a>
                     </div>
                     <ul class="footer-links list-reset">
                         <li>
-                            <a href="#">Contact</a>
+                            <a href="#contact"  onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' }); return false;">Contact</a>
                         </li>
                         <li>
-                            <a href="#">About us</a>
+                            <a href="#aboutEvent" onclick="document.getElementById('aboutEvent').scrollIntoView({ behavior: 'smooth' }); return false;">About us</a>
                         </li>
                         <li>
-                            <a href="#">FAQ's</a>
+                            <a href="#faq" onclick="document.getElementById('faq').scrollIntoView({ behavior: 'smooth' }); return false;">FAQ's</a>
                         </li>
                         <li>
-                            <a href="#">Support</a>
+                            <a href="#sponsors" onclick="document.getElementById('sponsors').scrollIntoView({ behavior: 'smooth' }); return false;">Sponsors</a>
                         </li>
                     </ul>
                     <ul class="footer-social-links list-reset">
                         <li>
                             <a href="#">
                                 <span class="screen-reader-text">Instagram</span>
-                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M6.023 16L6 9H3V6h3V4c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V6H13l-1 3H9.28v7H6.023z" fill="#FFF"/>
-                                </svg>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="screen-reader-text">Twitter</span>
-                                <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M16 3c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4C.7 7.7 1.8 9 3.3 9.3c-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4C15 4.3 15.6 3.7 16 3z" fill="#FFF"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="16" height="16" viewBox="0,0,256,256">
+                                    <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M16,3c-7.17,0 -13,5.83 -13,13v18c0,7.17 5.83,13 13,13h18c7.17,0 13,-5.83 13,-13v-18c0,-7.17 -5.83,-13 -13,-13zM37,11c1.1,0 2,0.9 2,2c0,1.1 -0.9,2 -2,2c-1.1,0 -2,-0.9 -2,-2c0,-1.1 0.9,-2 2,-2zM25,14c6.07,0 11,4.93 11,11c0,6.07 -4.93,11 -11,11c-6.07,0 -11,-4.93 -11,-11c0,-6.07 4.93,-11 11,-11zM25,16c-4.96,0 -9,4.04 -9,9c0,4.96 4.04,9 9,9c4.96,0 9,-4.04 9,-9c0,-4.96 -4.04,-9 -9,-9z"></path></g></g>
                                 </svg>
                             </a>
                         </li>
@@ -451,7 +499,7 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="footer-copyright">&copy; 2024 Built with ❤️ | AIDA</div>
+                    <div class="footer-copyright" onclick="redirectFunction('https://www.google.com/webhp?authuser=0')">&copy; 2024 Built with ❤️ | AIDA</div>
                 </div>
             </div>
         </footer>

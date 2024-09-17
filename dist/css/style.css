@@ -8,6 +8,37 @@ html {
     zoom: 110%;
 }
 
+.content {
+    padding-bottom: 7%;
+}
+
+.content::marker {
+    color: black;
+}
+
+.lights-off .content::marker {
+    color: white;
+}
+
+.icon-toggle {
+    cursor: pointer;
+    font-size: 24px;
+    position: relative;
+}
+
+#icon-dark {
+    display: none;
+}
+
+.lights-off #icon-light {
+    display: none;
+    transition: 0.3s ease-out;
+}
+
+.lights-off #icon-dark {
+    display: inline-block;
+}
+
 .sponsor-icon {
     width: 500px;margin-left: 5%;border-radius: 50px;
 }
@@ -166,8 +197,11 @@ html {
 
 .nav-links a {
     color: rgb(0, 0, 0);
-    text-decoration: none;
     font-size: 1rem;
+}
+
+.lights-off .nav-links a {
+    color: white;
 }
 
 .nav-links a:hover {
@@ -376,9 +410,14 @@ html {
     }
     .nav-active {
         opacity: 1;
+        background-color: #98d3d7;
         right:0;
         display: flex !important;
         border-radius: 25px;
+    }
+
+    .lights-off .nav-active {
+        background-color: #2a4157;
     }
 
     .nav-links li {
@@ -387,7 +426,7 @@ html {
     }
 
     .nav-links a {
-        color: #8595AE;
+        color: black;
         text-decoration: none;
         font-size: 1rem;
     }
@@ -1683,17 +1722,17 @@ label {
 .switch[type="checkbox"]+label::before {
     top: 0;
     left: 0;
-    width: 64px;
-    height: 36px;
+    width: 40px;
+    height: 22px;
     border-radius: 18px;
     background: #E9EDF3
 }
 
 .switch[type="checkbox"]+label::after {
-    top: 6px;
-    left: 6px;
-    width: 24px;
-    height: 24px;
+    top: 3.5px;
+    left: 3.5px;
+    width: 15px;
+    height: 15px;
     border-radius: 12px;
     background: #fff;
     transition: all .15s ease-out
@@ -1704,7 +1743,7 @@ label {
 }
 
 .switch[type="checkbox"]:checked+label::after {
-    left: 34px
+    left: 22px
 }
 
 @media (min-width: 641px) {
@@ -1815,16 +1854,18 @@ label {
 }
 
 .button-primary-closed {
-    color: rgb(0, 0, 0);
+    border-radius: 25px;
+    color: #414f5c;
 }
 
 .button-primary {
     color: #fff !important;
-    background-color: #535FD7
+    background-color: #535FD7;
+    border-radius: 50px;
 }
 
 .button-primary:hover {
-    background: #5763d8
+    background: #6a75dd
 }
 
 .button-primary.button-shadow::before {
@@ -1936,7 +1977,8 @@ label {
 }
 
 .lights-toggle {
-    color: rgba(107, 122, 144, 0.64)
+    color: rgba(107, 122, 144, 0.64);
+    display: inline-block;
 }
 
 .header-illustration {
@@ -1992,7 +2034,8 @@ label {
     }
 
     .lights-toggle {
-        justify-content: center
+        justify-content: center;
+        display: inline-block;
     }
 }
 
