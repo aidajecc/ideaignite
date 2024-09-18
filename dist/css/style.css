@@ -8,6 +8,19 @@ html {
     zoom: 110%;
 }
 
+.hidden {
+    display: none;
+}
+
+.contact-phone {
+    display: none;
+}
+
+.left-footer {
+    margin-right: 50%;
+
+}
+
 .content {
     padding-bottom: 7%;
 }
@@ -328,6 +341,22 @@ html {
 }
 
 @media (max-width: 768px) {
+
+    .contact-laptop1 {
+        display: none;
+    }
+
+    .contact-laptop1dark {
+        display: none;
+    }
+
+    .contact-laptop2 {
+        display: none;
+    }
+
+    .contact-phone {
+        display: block;
+    }
 
     html {
         zoom: 100%;
